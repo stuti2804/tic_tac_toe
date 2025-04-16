@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Advanced Tic-Tac-Toe</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Tic-Tac-Toe</h1>
+        
+        <!-- Game Settings -->
+        <div class="settings">
+            <div class="marker-select">
+                <label>Choose Your Marker:</label>
+                <select id="playerMarker">
+                    <option value="X">X</option>
+                    <option value="O">O</option>
+                    <option value="🐱">🐱</option>
+                    <option value="🐶">🐶</option>
+                    <option value="❤️">❤️</option>
+                    <option value="⭐">⭐</option>
+                </select>
+            </div>
+            <div class="difficulty-select">
+                <label>Difficulty:</label>
+                <select id="difficulty">
+                    <option value="easy">Easy</option>
+                    <option value="medium">Medium</option>
+                    <option value="impossible">Impossible</option>
+                </select>
+            </div>
+            <div class="time-attack">
+                <label>
+                    <input type="checkbox" id="timeAttack">
+                    Time Attack Mode (10s per move)
+                </label>
+            </div>
+        </div>
+
+        <!-- Timer Display -->
+        <div id="timer" class="timer hidden">Time left: 10s</div>
+
+        <!-- Game Board -->
+        <div class="board">
+            <div class="cell" data-index="0"></div>
+            <div class="cell" data-index="1"></div>
+            <div class="cell" data-index="2"></div>
+            <div class="cell" data-index="3"></div>
+            <div class="cell" data-index="4"></div>
+            <div class="cell" data-index="5"></div>
+            <div class="cell" data-index="6"></div>
+            <div class="cell" data-index="7"></div>
+            <div class="cell" data-index="8"></div>
+        </div>
+
+        <!-- Game Controls -->
+        <div class="controls">
+            <button id="undoMove" class="power-up">↩️ Undo Move</button>
+            <button id="showNextMove" class="power-up">🔮 Show AI's Next Move</button>
+            <button id="resetGame">New Game</button>
+        </div>
+
+        <!-- Game Stats -->
+        <div class="stats">
+            <span>Wins: <span id="wins">0</span></span>
+            <span>Draws: <span id="draws">0</span></span>
+            <span>Losses: <span id="losses">0</span></span>
+        </div>
+
+        <!-- Status Message -->
+        <div id="status" class="status">Your Turn</div>
+    </div>
+    <script src="game.js"></script>
+</body>
+</html>
